@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ice Cream</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <style>
+      body {
+        background-color: black;
+        color: white;
+        font-family: "Poppins", sans-serif;
+      }
+      .container {
+        background: white;
+        box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.25);
+        border-radius: 20px 20px 100px 100px;
+        width: 100%;
+        max-width: 1239px;
+        margin: 0 auto;
+        padding: 70px 50px;
+        position: relative;
+        min-height: 80vh; /* Ensure the container is tall enough */
+      }
+      .menu-item {
+        background: black;
+        border-radius: 50px;
+        border: 1px solid #5f5858;
+        color: white;
+        font-size: 24px;
+        font-family: "Actor", sans-serif;
+        font-weight: 400;
+        text-align: center;
+        line-height: 32px;
+        height: 32px;
+        width: 130px;
+        position: absolute;
+        top: 20px;
+        cursor: pointer; /* Added cursor pointer */
+      }
+      .home {
+        left: 10%;
+      }
+      .about {
+        left: 30%;
+      }
+      .services {
+        left: 50%;
+      }
+      .text-section {
+        color: black;
+        font-size: 12px;
+        font-family: "Poppins", sans-serif;
+        font-weight: 400;
+        line-height: 20px;
+        word-wrap: break-word;
+        padding: 20px;
+        flex: 1;
+        box-sizing: border-box;
+        margin-top: 100px; /* Move text section down */
+      }
+      .highlight-text {
+        color: #ff995a;
+        font-size: 24px;
+        font-family: "Poppins", sans-serif;
+        font-weight: 700;
+        line-height: 30px;
+        word-wrap: break-word;
+        margin-top: 50px; /* Increase separation between texts */
+      }
+      .ice-cream-text {
+        color: black;
+        font-size: 33px;
+        font-family: "Rubik", sans-serif;
+        font-weight: 600;
+        line-height: 40px;
+        word-wrap: break-word;
+      }
+      .image-section {
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-start;
+        padding: 20px;
+        width: 425px;
+        height: 420px;
+        flex: 0 0 425px;
+        margin-top: 50px; /* Move image section down more */
+      }
+      .content {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+      }
+      .order-button {
+        width: 150px;
+        height: 50px;
+        background: black;
+        border-radius: 50px;
+        border: 1px solid #5f5858;
+        color: white;
+        font-size: 16px;
+        font-family: "Actor", sans-serif;
+        font-weight: 400;
+        text-align: center;
+        padding-top: 12px;
+        margin-top: 10px;
+        cursor: pointer;
+        align-self: center;
+      }
+      .search-button {
+        width: 150px;
+        height: 50px;
+        background: black;
+        border-radius: 20px;
+        border: 1px solid #ccc0bd;
+        color: white;
+        font-size: 16px;
+        font-family: "Actor", sans-serif;
+        font-weight: 400;
+        text-align: center;
+        padding-top: 12px;
+        margin-top: 20px;
+        cursor: pointer;
+        position: absolute;
+        top: -10px;
+        right: 20px;
+        display: none; /* Hide the button */
+      }
+      .footer {
+        position: absolute;
+        bottom: 20px;
+        width: 100%;
+        text-align: center;
+        font-size: 12px;
+        color: #777;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div id="home" class="menu-item home" onclick="location.href='/'">
+        Home
+      </div>
+      <div
+        id="about"
+        class="menu-item about"
+        onclick="location.href='aboutUs.html'"
+      >
+        About
+      </div>
+      <div
+        id="services"
+        class="menu-item services"
+        onclick="location.href='chefsWaitresses.html'"
+      >
+        Services
+      </div>
+      <div class="content">
+        <div class="text-section">
+          <div class="ice-cream-text">Ice cream solves Stress</div>
+          <div class="highlight-text">FEELING HOT?</div>
+          <div>GET YOURS NOW!</div>
+          <div>
+            At Ottawa Coffee House, we believe that a perfect blend of coffee
+            and delicious food can make your day. Nestled in the heart of
+            Ottawa, our coffee house offers a cozy atmosphere where friends
+            gather, conversations flow, and every sip and bite tell a delightful
+            story.
+          </div>
+        </div>
+        <div class="image-section">
+          <img src="./images/milkshake.png" alt="Milkshake" />
+        </div>
+      </div>
+      <div class="order-button" onclick="location.href='reservation.html'">
+        Order Now
+      </div>
+    </div>
+    <div class="footer">
+      Copyright © 2024 Coffee Inc. All rights reserved. Privacy Policy Terms of
+      Use Sales Policy Legal Site Map
+    </div>
+  </body>
+</html>

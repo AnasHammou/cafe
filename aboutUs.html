@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us</title>
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Playfair Display", serif;
+      }
+
+      .main-frame {
+        width: 100%;
+        height: 100vh;
+        background: white;
+        box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.25);
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 100px;
+        border-bottom-left-radius: 100px;
+        padding: 20px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      .content {
+        display: flex;
+        justify-content: space-between;
+        height: 100%;
+      }
+
+      .text-section {
+        width: 55%;
+      }
+
+      .about-us-title-container {
+        display: flex;
+        align-items: center;
+        margin-bottom: 30px;
+      }
+
+      .about-us-title {
+        color: black;
+        font-size: 33px;
+        font-family: "Rubik";
+        font-weight: 600;
+        line-height: 40px;
+        word-wrap: break-word;
+        margin-left: 10px;
+      }
+
+      .about-us-text {
+        text-align: justify;
+        color: #3b3538;
+        font-size: 18px;
+        font-family: "Commissioner";
+        font-weight: 600;
+        line-height: 26px;
+        word-wrap: break-word;
+        margin-bottom: 20px;
+      }
+
+      .about-us-info {
+        color: #3b3538;
+        font-family: "Commissioner";
+        word-wrap: break-word;
+      }
+
+      .about-us-info .title {
+        font-size: 40px;
+        font-weight: 600;
+        line-height: 21px;
+        margin-bottom: 10px;
+      }
+
+      .about-us-info .subtext {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 21px;
+        margin-bottom: 10px;
+      }
+
+      .about-us-info .text {
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 35px;
+        margin-bottom: 20px;
+      }
+
+      .about-us-info .highlight {
+        font-size: 32px;
+        font-weight: 400;
+        line-height: 35px;
+        margin-bottom: 20px;
+      }
+
+      .contact-section {
+        width: 45%;
+        text-align: right;
+      }
+
+      .contact-us-title {
+        color: black;
+        font-size: 33px;
+        font-family: "Rubik";
+        font-weight: 600;
+        line-height: 40px;
+        word-wrap: break-word;
+        margin-bottom: 20px;
+      }
+
+      .contact-info {
+        color: #3b3538;
+        font-size: 20px;
+        font-family: "Commissioner";
+        font-weight: 400;
+        line-height: 35px;
+        word-wrap: break-word;
+        margin-bottom: 10px;
+      }
+
+      .images-container {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+      }
+
+      .images-container img {
+        width: 49%;
+        border-radius: 30px;
+      }
+
+      .image-placeholder {
+        width: 49%;
+        height: auto;
+        background: #f0f0f0;
+        border-radius: 30px;
+      }
+
+      .right-image {
+        width: 350px;
+        height: 500px;
+        position: absolute;
+        top: 200px;
+        right: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="main-frame">
+        <div class="content">
+          <div class="text-section">
+            <div class="about-us-title-container">
+              <div class="about-us-title">About Us</div>
+            </div>
+            <div class="about-us-text">
+              Ottawa-coffee.com (OTTAWA COFFEE LTD) is Canada’s first hyperlocal
+              online platform that helps local merchants to connect with their
+              potential customers in real-time. With OTTAWA COFFEE, merchants
+              can build a strong brand presence and increase high visibility to
+              get discovered easily.
+            </div>
+            <div class="about-us-info">
+              <div class="title">Hey Shoppers! <br /></div>
+              <div class="subtext"><br /></div>
+              <div class="text">
+                Hate missing out on offers around you<br /><br />Don’t worry
+                with Ottawa coffee now you will be able to see what your
+                favourite merchants have in store for you.<br />
+              </div>
+              <div class="subtext"><br /></div>
+              <div class="text">So, what are you waiting for? <br /></div>
+              <div class="highlight">
+                <br />JOIN OTTAWA COFFEE AND SPREAD THE WORD!<br /><br />
+              </div>
+            </div>
+            <div class="images-container">
+              <img src="images/google.png" alt="Google" />
+              <img src="images/apple.png" alt="Apple" />
+            </div>
+          </div>
+          <div class="contact-section">
+            <div class="contact-us-title">Contact Us</div>
+            <div class="contact-info">ottawacoffee@gmail.com</div>
+            <div class="contact-info">+16135250670</div>
+          </div>
+          <img src="images/image.png" alt="Image" class="right-image" />
+        </div>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>

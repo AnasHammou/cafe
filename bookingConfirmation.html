@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Confirmation Page</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: "Abhaya Libre", sans-serif;
+        background: black;
+        color: white;
+      }
+      .container {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        position: relative;
+      }
+      .top-left-img {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        width: 350px;
+        height: 180px;
+      }
+      .title {
+        font-size: 64px;
+        font-family: "Timmana", sans-serif;
+        font-weight: 400;
+        text-align: center;
+        word-wrap: break-word;
+        margin-top: 160px; /* Adjusted margin */
+      }
+      .description {
+        text-align: center;
+        color: white;
+        font-size: 26px;
+        font-family: "Lexend", sans-serif;
+        font-weight: 400;
+        text-transform: capitalize;
+        line-height: 39px;
+        word-wrap: break-word;
+        margin-top: 40px;
+        margin-bottom: 80px; /* Adjusted margin */
+      }
+      .line {
+        width: 80%;
+        border-bottom: 1px solid white;
+        margin-top: 20px;
+        margin-bottom: 40px; /* Adjusted margin */
+      }
+      .button {
+        width: auto;
+        padding: 18px 36px;
+        background: #ffaa76;
+        border-radius: 100px;
+        border: 1px solid #c0a677;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        cursor: pointer;
+        margin-top: 40px; /* Adjusted margin */
+      }
+      .button-text {
+        color: black;
+        font-size: 24px;
+        font-family: "Abhaya Libre", sans-serif;
+        font-weight: 400;
+        word-wrap: break-word;
+      }
+      .button-icon {
+        color: black;
+        font-size: 24px;
+        font-family: "Inter", sans-serif;
+        font-weight: 500;
+        word-wrap: break-word;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <img class="top-left-img" src="images/branch.png" alt="Branch Image" />
+      <div class="title">Your Booking Has Been Confirmed!</div>
+      <div class="description">
+        We look forward To Welcoming you!<br />We will send you a reminder of
+        your booking through email.
+      </div>
+      <div class="line"></div>
+      <div class="button" onclick="goToHomePage()">
+        <div class="button-text">Home Page</div>
+        <div class="button-icon">↗</div>
+      </div>
+    </div>
+
+    <script>
+      function goToHomePage() {
+        // Redirect to the home page
+        window.location.href = "/"; // Ensure this is the correct URL for the home page
+      }
+    </script>
+  </body>
+</html>

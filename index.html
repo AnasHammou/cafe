@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Homepage</title>
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Playfair Display", serif;
+      }
+
+      .main-frame {
+        width: 100%;
+        height: 100vh;
+        background: white;
+        box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.25);
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 100px;
+        border-bottom-left-radius: 100px;
+        padding: 20px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      .top-buttons {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+      }
+
+      .button {
+        width: 100px;
+        height: 50px;
+        background: black;
+        border-radius: 50px;
+        border: 1px solid black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 16px;
+        margin-right: 10px;
+      }
+
+      .logo {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        cursor: pointer;
+      }
+
+      .frame2 {
+        width: 100%;
+        background: rgba(196, 196, 196, 0.15);
+        margin-top: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px;
+        flex-grow: 1;
+      }
+
+      .frame2-content {
+        width: 50%;
+        text-align: right;
+        padding-right: 20px;
+      }
+
+      .frame2-title {
+        color: black;
+        font-size: 40px;
+        font-weight: 700;
+        word-wrap: break-word;
+      }
+
+      .frame2-text {
+        color: #0a0000;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 34px;
+        word-wrap: break-word;
+      }
+
+      .frame2 img {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .footer {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+      }
+
+      .footer div {
+        width: 32%;
+      }
+
+      .footer-title {
+        color: #443232;
+        font-size: 18px;
+        font-family: "Inter";
+        font-weight: 600;
+        word-wrap: break-word;
+        padding-left: 20px; /* Added padding-left */
+      }
+
+      .footer-text {
+        width: 100%;
+        color: #443232;
+        font-size: 12px;
+        font-family: "Inter";
+        font-weight: 400;
+        word-wrap: break-word;
+        padding-left: 20px; /* Added padding-left */
+      }
+
+      .learn-more-button {
+        width: 100%;
+        height: 50px;
+        background: #f9c06a;
+        box-shadow: 0px 6px 12px rgba(249, 192, 106, 0.22);
+        border-radius: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: black;
+        font-size: 16px;
+        font-weight: 600;
+        cursor: pointer;
+        margin-top: 20px;
+      }
+
+      /* Styles for the dialog */
+      .dialog {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 250px;
+        height: 100vh;
+        background: white;
+        border-left: 1px solid black;
+        border-radius: 0 0 0 30px;
+        padding: 20px;
+        transition: right 0.3s ease-in-out;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        padding-top: 60px; /* Added padding-top */
+      }
+
+      .dialog .button {
+        width: 200px;
+        height: 50px;
+        background: black;
+        border-radius: 20px;
+        border: 2px solid rgba(0, 0, 0, 0.61);
+        margin-bottom: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 16px;
+        cursor: pointer;
+      }
+
+      .dialog.show {
+        right: 0;
+      }
+
+      .dialog .button.clicked {
+        background: #443232;
+        border: 2px solid rgba(0, 0, 0, 0.61);
+      }
+
+      .close-dialog {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        cursor: pointer;
+        font-size: 20px;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="main-frame">
+        <div class="top-buttons">
+          <div class="button" onclick="window.location.href='/'">Home</div>
+          <div class="button" onclick="window.location.href='aboutUs.html'">
+            About
+          </div>
+          <div
+            class="button"
+            onclick="window.location.href='chefsWaitresses.html'"
+          >
+            Services
+          </div>
+        </div>
+        <div class="logo" id="menu-icon">
+          <div>
+            <div
+              style="
+                width: 30px;
+                height: 3px;
+                background-color: black;
+                margin: 5px 0;
+              "
+            ></div>
+            <div
+              style="
+                width: 30px;
+                height: 3px;
+                background-color: black;
+                margin: 5px 0;
+              "
+            ></div>
+            <div
+              style="
+                width: 30px;
+                height: 3px;
+                background-color: black;
+                margin: 5px 0;
+              "
+            ></div>
+          </div>
+        </div>
+        <div class="frame2">
+          <div class="frame2-image">
+            <img src="images/image.png" alt="Coffee Image" />
+          </div>
+          <div class="frame2-content">
+            <div class="frame2-title">Discover the best coffee</div>
+            <div class="frame2-text">
+              At Ottawa coffee shop, we believe that a great cup of coffee can
+              make your day. Nestled in the heart of Ottawa, our coffee shop
+              offers a warm and inviting space where friends meet, ideas flow,
+              and every cup tells a story.
+            </div>
+            <div
+              class="learn-more-button"
+              onclick="window.location.href='cake.html'"
+            >
+              Learn More
+            </div>
+          </div>
+        </div>
+        <div class="footer">
+          <div>
+            <div class="footer-title">Our Coffee Beans</div>
+            <div class="footer-text">
+              We source the finest, ethically-grown beans from around the world,
+              ensuring every cup is rich and satisfying.
+            </div>
+          </div>
+          <div>
+            <div class="footer-title">Brewing Methods</div>
+            <div class="footer-text">
+              From espresso to French press, our skilled baristas use various
+              techniques to craft the perfect cup just for you.
+            </div>
+          </div>
+          <div>
+            <div class="footer-title">Coffee and Community</div>
+            <div class="footer-text">
+              Join us for coffee tastings, workshops, and local art events. Our
+              shop is a hub for coffee lovers and community connections.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Dialog HTML structure -->
+    <div class="dialog" id="menu-dialog">
+      <div class="close-dialog" id="close-dialog">X</div>
+      <div
+        class="button"
+        id="coffee-button"
+        onclick="window.location.href='hotCoffee.html'"
+      >
+        Coffee
+      </div>
+      <div
+        class="button"
+        id="teas-button"
+        onclick="window.location.href='hotCoffee.html'"
+      >
+        Teas
+      </div>
+      <div
+        class="button"
+        id="foods-button"
+        onclick="window.location.href='cake.html'"
+      >
+        Foods
+      </div>
+      <div
+        class="button"
+        id="ice-cream-button"
+        onclick="window.location.href='icecream.html'"
+      >
+        Ice-Cream
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+      // JavaScript to handle menu icon click and show/hide the dialog
+      document
+        .getElementById("menu-icon")
+        .addEventListener("click", function () {
+          const dialog = document.getElementById("menu-dialog");
+          dialog.classList.add("show");
+        });
+
+      document
+        .getElementById("close-dialog")
+        .addEventListener("click", function () {
+          const dialog = document.getElementById("menu-dialog");
+          dialog.classList.remove("show");
+        });
+
+      // JavaScript to handle button click, change color, and redirect
+      const buttons = document.querySelectorAll(".dialog .button");
+
+      buttons.forEach((button, index) => {
+        button.addEventListener("click", function () {
+          buttons.forEach((btn) => btn.classList.remove("clicked"));
+          this.classList.add("clicked");
+          let url = "";
+          switch (index) {
+            case 0:
+            case 1:
+              url = "hotCoffee.html";
+              break;
+            case 2:
+              url = "cake.html";
+              break;
+            case 3:
+              url = "icecream.html";
+              break;
+          }
+          setTimeout(() => {
+            window.location.href = url;
+          }, 300); // Delay to show color change before redirect
+        });
+      });
+    </script>
+  </body>
+</html>

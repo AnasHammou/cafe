@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Menu</title>
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      .frame {
+        width: 100%;
+        height: 100vh;
+        background: white;
+        border-radius: 30px;
+        border: 1px solid black;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      .button {
+        width: 200px;
+        height: 50px;
+        background: black;
+        border-radius: 20px;
+        border: 2px solid rgba(0, 0, 0, 0.61);
+        margin-bottom: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 16px;
+        cursor: pointer;
+      }
+      .button.active {
+        background: #443232;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="frame">
+        <div class="button">Coffee</div>
+        <div class="button">Teas</div>
+        <div class="button">Foods</div>
+        <div class="button">Ice-Cream</div>
+      </div>
+    </div>
+    <script>
+      document.querySelectorAll(".button").forEach((button) => {
+        button.addEventListener("click", () => {
+          document
+            .querySelectorAll(".button")
+            .forEach((btn) => btn.classList.remove("active"));
+          button.classList.add("active");
+        });
+      });
+    </script>
+  </body>
+</html>

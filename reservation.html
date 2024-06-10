@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reservation Page</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: "Abhaya Libre", sans-serif;
+        background: black;
+      }
+      .container {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        position: relative;
+      }
+      .top-left-img {
+        position: absolute;
+        top: 40px;
+        left: 20px;
+        width: 350px;
+        height: 200px;
+      }
+      .title {
+        font-size: 64px;
+        font-family: "Timmana", sans-serif;
+        font-weight: 400;
+        text-align: center;
+        word-wrap: break-word;
+        margin-top: 20px;
+      }
+      .text-box-container {
+        width: 50%;
+        padding-top: 40px;
+        padding-bottom: 40px;
+      }
+      .text-box {
+        text-align: center;
+        color: white;
+        font-size: 16px;
+        font-family: "Abhaya Libre", sans-serif;
+        font-weight: 400;
+        text-transform: uppercase;
+        letter-spacing: 3.2px;
+        word-wrap: break-word;
+        border-bottom: 1px solid white;
+        margin-bottom: 20px;
+      }
+      .input-box {
+        width: 100%;
+        padding: 10px;
+        background-color: transparent;
+        border: none;
+        border-bottom: 1px solid white;
+        color: white;
+        font-family: "Abhaya Libre", sans-serif;
+        font-size: 16px;
+        margin-bottom: 20px;
+      }
+      .button {
+        width: auto;
+        height: auto;
+        padding: 18px 36px;
+        background: #ffaa76;
+        border-radius: 100px;
+        border: 1px solid #c0a677;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        cursor: pointer;
+        margin-top: 20px;
+      }
+      .button-text {
+        color: #14274a;
+        font-size: 24px;
+        font-family: "Abhaya Libre", sans-serif;
+        font-weight: 400;
+        word-wrap: break-word;
+      }
+      .button-icon {
+        color: #14274a;
+        font-size: 24px;
+        font-family: "Inter", sans-serif;
+        font-weight: 500;
+        word-wrap: break-word;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <img class="top-left-img" src="images/branch.png" alt="Branch Image" />
+      <div class="title">Make a Reservation</div>
+      <div class="text-box-container">
+        <input type="text" id="name" class="input-box" placeholder="Name *" />
+        <input type="text" id="phone" class="input-box" placeholder="Phone *" />
+        <input type="text" id="time" class="input-box" placeholder="Time *" />
+        <input type="text" id="email" class="input-box" placeholder="Email *" />
+      </div>
+      <div class="text-box-container">
+        <input type="date" id="date" class="input-box" placeholder="Date *" />
+        <input
+          type="number"
+          id="seats"
+          class="input-box"
+          placeholder="Number of Seats *"
+        />
+        <select class="input-box" id="waitress">
+          <option value="" disabled selected>Select Waitress *</option>
+          <option value="Jessica">Jessica</option>
+          <option value="Joanna">Joanna</option>
+        </select>
+        <select class="input-box" id="chef">
+          <option value="" disabled selected>Select Chef *</option>
+          <option value="John">John</option>
+          <option value="Jack">Jack</option>
+        </select>
+      </div>
+      <div class="button" onclick="makeReservation()">
+        <div class="button-text">Make Reservation</div>
+        <div class="button-icon">↗</div>
+      </div>
+    </div>
+
+    <script>
+      function makeReservation() {
+        // Get all the input values
+        var name = document.getElementById("name").value;
+        var phone = document.getElementById("phone").value;
+        var time = document.getElementById("time").value;
+        var email = document.getElementById("email").value;
+        var date = document.getElementById("date").value;
+        var seats = document.getElementById("seats").value;
+        var waitress = document.getElementById("waitress").value;
+        var chef = document.getElementById("chef").value;
+
+        // Check if all fields are filled
+        if (
+          !name ||
+          !phone ||
+          !time ||
+          !email ||
+          !date ||
+          !seats ||
+          !waitress ||
+          !chef
+        ) {
+          alert("Please fill all the required fields.");
+          return;
+        }
+
+        // If all fields are filled, proceed with the reservation logic
+        console.log("Reservation made!");
+        window.location.href = "bookingConfirmation.html";
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cake</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <style>
+      body {
+        background-color: black;
+        color: white;
+        font-family: "Poppins", sans-serif;
+      }
+      .container {
+        background: white;
+        box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.25);
+        border-radius: 20px 20px 100px 100px;
+        width: 100%;
+        max-width: 1239px;
+        margin: 0 auto;
+        padding: 70px 50px;
+        position: relative;
+        min-height: 80vh; /* Ensure the container is tall enough */
+        display: flex; /* Add flex display to allow side-by-side elements */
+        margin-top: 60px; /* Add margin-top to create space */
+      }
+      .menu-item {
+        background: black;
+        border-radius: 50px;
+        border: 1px solid #5f5858;
+        color: white;
+        font-size: 24px;
+        font-family: "Actor", sans-serif;
+        font-weight: 400;
+        text-align: center;
+        line-height: 32px;
+        height: 32px;
+        width: 130px;
+        position: absolute;
+        top: 20px;
+        cursor: pointer; /* Added cursor pointer */
+      }
+      .home {
+        left: 10%;
+      }
+      .about {
+        left: 30%;
+      }
+      .services {
+        left: 50%;
+      }
+      .content {
+        display: flex;
+        justify-content: space-between; /* Add space between the two sections */
+        align-items: flex-start; /* Align items to the top */
+        width: 100%; /* Occupy full width of the container */
+      }
+      .text-section {
+        color: black;
+        font-size: 14px;
+        font-family: "Poppins", sans-serif;
+        font-weight: 400;
+        line-height: 23.8px;
+        letter-spacing: 0.56px;
+        word-wrap: break-word;
+        width: 45%; /* Adjusted width to take up more space */
+        margin-top: 100px; /* Move text section down */
+        margin-left: 5%; /* Increased left margin to move text further to the right */
+        padding: 20px;
+      }
+      .title1 {
+        color: #ff995a;
+        font-size: 48px;
+        font-family: "Poppins", sans-serif;
+        font-weight: 500;
+        word-wrap: break-word;
+        margin-bottom: 40px;
+      }
+      .title2 {
+        color: black;
+        font-size: 36px;
+        font-family: "Poppins", sans-serif;
+        font-weight: 500;
+        word-wrap: break-word;
+        margin-bottom: 40px;
+      }
+      .text {
+        margin-bottom: 40px;
+      }
+      .hunt-button {
+        width: 150px;
+        height: 50px;
+        background: #ff995a; /* Changed background color to match "Delicious" title */
+        border-radius: 50px;
+        color: white;
+        font-size: 14px;
+        font-family: "Poppins", sans-serif;
+        font-weight: 700;
+        text-align: center;
+        line-height: 50px; /* Center text vertically */
+        cursor: pointer;
+        margin-top: 20px;
+        display: none; /* Hide the button */
+      }
+      .image-section {
+        width: calc(50% - 46px); /* Calculate width for right section */
+        margin-top: 100px; /* Move image section down */
+        border-radius: 50px; /* Added to match the frame */
+        background: #e8c1b7; /* Added to match the frame */
+        padding: 0px; /* Increased padding for larger vertical size */
+        text-align: center;
+        color: #603809; /* Text color */
+      }
+      .image-content {
+        color: #603809; /* Text color */
+        font-size: 33px;
+        font-family: "Rubik", sans-serif;
+        font-weight: 600;
+        line-height: 40px;
+        word-wrap: break-word;
+      }
+      .price {
+        color: #885518; /* Price text color */
+        font-size: 24px;
+        font-family: "Rubik", sans-serif;
+        font-weight: 600;
+        line-height: 40px;
+        word-wrap: break-word;
+      }
+      .order-button {
+        width: 150px;
+        height: 50px;
+        background: black;
+        border-radius: 50px;
+        color: white;
+        font-size: 16px;
+        font-family: "Actor", sans-serif;
+        font-weight: 400;
+        text-align: center;
+        line-height: 50px; /* Center text vertically */
+        cursor: pointer;
+        position: absolute;
+        right: 230px;
+      }
+      .search-button {
+        width: 150px;
+        height: 50px;
+        background: black;
+        border-radius: 20px;
+        border: 1px solid #ccc0bd;
+        color: white;
+        font-size: 16px;
+        font-family: "Actor", sans-serif;
+        font-weight: 400;
+        text-align: center;
+        padding-top: 12px;
+        margin-top: 20px;
+        cursor: pointer;
+        position: absolute;
+        top: -10px;
+        right: 20px;
+        display: none; /* Hide the button */
+      }
+      .footer {
+        position: absolute;
+        bottom: 20px;
+        width: 100%;
+        text-align: center;
+        font-size: 12px;
+        color: #777;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div id="home" class="menu-item home" onclick="location.href='/'">
+        Home
+      </div>
+      <div
+        id="about"
+        class="menu-item about"
+        onclick="location.href='aboutUs.html'"
+      >
+        About
+      </div>
+      <div
+        id="services"
+        class="menu-item services"
+        onclick="location.href='chefsWaitresses.html'"
+      >
+        Services
+      </div>
+      <div class="content">
+        <div class="text-section">
+          <div class="title1">Delicious</div>
+          <div class="title2">The Hunger Games</div>
+          <div class="text">
+            At Ottawa Café, we believe that exceptional coffee and delectable
+            food create unforgettable moments. Located in the vibrant core of
+            Ottawa, our café provides a welcoming space where friends connect,
+            stories are shared, and every meal and drink are a taste of
+            perfection.
+          </div>
+        </div>
+        <div class="image-section">
+          <img src="images/cake.png" alt="Cake" />
+          <div class="image-content">
+            Cake<br />
+            <span class="price">$15</span><br />
+            <div
+              class="order-button"
+              onclick="location.href='reservation.html'"
+            >
+              Order Now
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer">Footer content here</div>
+  </body>
+</html>

@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hot Coffee</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <style>
+      body {
+        background-color: black;
+      }
+      .container {
+        background: white;
+        box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.25);
+        border-radius: 20px 20px 100px 100px;
+        width: 100%;
+        max-width: 1239px;
+        margin: 0 auto;
+        padding: 70px 50px; /* Adjusted padding (60px top and bottom, 20px left and right) */
+        position: relative;
+      }
+      .menu-item {
+        background: black;
+        border-radius: 50px;
+        border: 1px solid #5f5858;
+        color: white;
+        font-size: 24px;
+        font-family: "Actor";
+        font-weight: 400;
+        text-align: center;
+        line-height: 32px;
+        height: 32px;
+        width: 130px;
+        position: absolute;
+        cursor: pointer; /* Added cursor pointer */
+      }
+      .services {
+        left: 656px;
+        top: 64px;
+      }
+      .home {
+        left: 312px;
+        top: 64px;
+      }
+      .about {
+        left: 492px;
+        top: 64px;
+      }
+      .title {
+        color: black;
+        font-size: 33px;
+        font-family: "Rubik";
+        font-weight: 600;
+        line-height: 40px;
+        position: absolute;
+        top: 150px;
+        left: 493px;
+      }
+      .footer {
+        color: white;
+        font-size: 20px;
+        font-family: "Inter";
+        font-weight: 600;
+        position: absolute;
+        top: 968px;
+        left: 177px;
+      }
+      .order-now {
+        color: #1e1e1e;
+        font-size: 16px;
+        font-family: "Playfair Display";
+        font-weight: 700;
+        cursor: pointer; /* Added cursor pointer */
+      }
+      .product-title {
+        color: #603809;
+        font-size: 22px;
+        font-family: "Playfair Display";
+        font-weight: 700;
+      }
+      .product-desc {
+        color: #1e1e1e;
+        font-size: 16px;
+        font-family: "Playfair Display";
+        font-weight: 400;
+      }
+      .product-price {
+        color: #603809;
+        font-size: 18px;
+        font-family: "Playfair Display";
+        font-weight: 700;
+      }
+      .product-card {
+        background: #fff9f1;
+        border: 1px solid rgba(249, 192, 106, 0.42);
+        box-shadow: 0px 6px 12px rgba(249, 192, 106, 0.22);
+        border-radius: 30px;
+        padding: 10px;
+        margin: 20px;
+        flex: 1 1 calc(25% - 40px);
+        box-sizing: border-box;
+      }
+      .product-img {
+        width: 100%;
+        border-radius: 30px;
+      }
+      .product-order {
+        background: #f9c06a;
+        border-radius: 24px;
+        width: 134px;
+        height: 48px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 10px auto 0;
+      }
+      .products {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+      .top-left-img,
+      .top-right-img,
+      .bottom-banner {
+        position: absolute;
+      }
+      .top-left-img {
+        top: 0;
+        left: 0;
+      }
+      .top-right-img {
+        top: 0;
+        right: 0;
+      }
+      .bottom-banner {
+        bottom: -45px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <img
+        class="img-fluid top-left-img"
+        src="images/branch.png"
+        alt="Coffee Image"
+      />
+      <img
+        class="img-fluid top-right-img"
+        src="images/coffeelogo.png"
+        alt="Coffee Logo"
+      />
+      <div id="home" class="menu-item home">Home</div>
+      <div id="about" class="menu-item about">About</div>
+      <div id="services" class="menu-item services">Services</div>
+      <div class="title">Enjoy a new blend of coffee style</div>
+      <div class="footer">
+        Copyright © 2024 Coffee Inc. All rights reserved. Privacy Policy Terms
+        of Use Sales Policy Legal Site Map
+      </div>
+      <div class="products" style="margin-top: 300px">
+        <div class="product-card">
+          <img
+            class="product-img"
+            src="images/option1.png"
+            alt="Product Image"
+          />
+          <div class="text-center">
+            <div class="product-title">Macchiato</div>
+            <div class="product-desc">Coffee 50% | Milk 50%</div>
+            <div class="product-price">$8.50</div>
+            <div class="product-order">
+              <span class="order-now" onclick="orderNow()">Order Now</span>
+            </div>
+          </div>
+        </div>
+        <div class="product-card">
+          <img
+            class="product-img"
+            src="images/option2.png"
+            alt="Product Image"
+          />
+          <div class="text-center">
+            <div class="product-title">Espresso</div>
+            <div class="product-desc">Coffee 100%</div>
+            <div class="product-price">$7.00</div>
+            <div class="product-order">
+              <span class="order-now" onclick="orderNow()">Order Now</span>
+            </div>
+          </div>
+        </div>
+        <div class="product-card">
+          <img
+            class="product-img"
+            src="images/option3.png"
+            alt="Product Image"
+          />
+          <div class="text-center">
+            <div class="product-title">Latte</div>
+            <div class="product-desc">Coffee 30% | Milk 70%</div>
+            <div class="product-price">$6.50</div>
+            <div class="product-order">
+              <span class="order-now" onclick="orderNow()">Order Now</span>
+            </div>
+          </div>
+        </div>
+        <div class="product-card">
+          <img
+            class="product-img"
+            src="images/option4.png"
+            alt="Product Image"
+          />
+          <div class="text-center">
+            <div class="product-title">Cappuccino</div>
+            <div class="product-desc">Coffee 40% | Milk 60%</div>
+            <div class="product-price">$7.50</div>
+            <div class="product-order">
+              <span class="order-now" onclick="orderNow()">Order Now</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <img
+        class="img-fluid bottom-banner"
+        src="images/banner.png"
+        alt="Banner"
+      />
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+      document.getElementById("home").onclick = function () {
+        window.location.href = "/";
+      };
+      document.getElementById("about").onclick = function () {
+        window.location.href = "aboutUs.html";
+      };
+      document.getElementById("services").onclick = function () {
+        window.location.href = "chefsWaitresses.html";
+      };
+      function orderNow() {
+        window.location.href = "reservation.html";
+      }
+    </script>
+  </body>
+</html>

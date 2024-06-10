@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chefs and Waitresses</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: "Abhaya Libre", sans-serif;
+        background: black;
+        color: white;
+      }
+      .container {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+      }
+      .left-side,
+      .right-side {
+        width: 50%;
+        height: 100%;
+        padding: 20px;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 200px;
+      }
+      .top-left-img {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        width: 450px;
+        height: 200px;
+      }
+      .title {
+        font-size: 64px;
+        font-family: "Abhaya Libre", sans-serif;
+        font-weight: 400;
+        text-align: center;
+        word-wrap: break-word;
+        margin-bottom: 30px; /* Adjust this margin to add more space */
+      }
+      .description {
+        text-align: center;
+        font-size: 26px;
+        font-family: "Abhaya Libre", sans-serif;
+        font-weight: 400;
+        text-transform: capitalize;
+        line-height: 39px;
+        word-wrap: break-word;
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
+      .line {
+        width: 80%;
+        border-bottom: 1px solid white;
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
+      .button-container {
+        width: 100%;
+        text-align: center;
+        margin-top: 50px;
+      }
+      .button {
+        width: 300px;
+        padding: 18px 36px;
+        background: #ffaa76;
+        border-radius: 100px;
+        border: 1px solid #c0a677;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        cursor: pointer;
+        margin-top: auto;
+        margin: 0 auto; /* Center the button horizontally */
+      }
+      .button-text {
+        color: black;
+        font-size: 24px;
+        font-family: "Abhaya Libre", sans-serif;
+        font-weight: 400;
+        word-wrap: break-word;
+      }
+      .button-icon {
+        color: black;
+        font-size: 24px;
+        font-family: "Inter", sans-serif;
+        font-weight: 500;
+        word-wrap: break-word;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <img class="top-left-img" src="images/branch.png" alt="Branch Image" />
+      <div class="left-side">
+        <div class="title">Chefs</div>
+        <div class="description">
+          Our talented chefs craft delicious meals and treats using fresh,
+          high-quality ingredients. Their passion for cooking shines through in
+          every dish they prepare.
+        </div>
+        <div class="line"></div>
+      </div>
+      <div class="right-side">
+        <div class="title">Waitresses</div>
+        <div class="description">
+          Our friendly waitresses are here to ensure you have a delightful
+          experience. With warm smiles and attentive service, they make every
+          visit to our coffee shop a pleasure.
+        </div>
+        <div class="line"></div>
+      </div>
+    </div>
+    <div class="button-container">
+      <div class="button" onclick="goToReservation()">
+        <div class="button-text">Make a Reservation</div>
+        <div class="button-icon">↗</div>
+      </div>
+    </div>
+
+    <script>
+      function goToReservation() {
+        // Redirect to the reservation page
+        window.location.href = "reservation.html"; // Ensure this is the correct URL for the reservation page
+      }
+    </script>
+  </body>
+</html>
